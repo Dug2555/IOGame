@@ -23,13 +23,13 @@ function animate() {
 	requestAnimationFrame( animate );
 
 	cube.rotation.x += 0.01;
-	cube.rotation.y += 0.01;
+	//cube.rotation.y += 0.01;
 
 	//cube2.rotation.z += 0.01;
 	//cube2.rotation.y += 0.01;
 	
 	//cube2.translateX(value);
-	//cube.translateY(value);
+	cube.translateY(value);
 
 	renderer.render( scene, camera );
 }
