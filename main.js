@@ -18,7 +18,7 @@ scene.add( cube );
 //scene.add( cube2 );
 
 camera.position.z = 5;
-//var value = .01;
+var value = .01;
 function animate() {
 	requestAnimationFrame( animate );
 
