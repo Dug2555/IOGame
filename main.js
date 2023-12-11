@@ -29,7 +29,7 @@ function animate() {
 	//cube2.rotation.y += 0.01;
 	
 	//cube2.translateX(value);
-	cube.translateY(value);
+	//cube.translateY(value);
 
 	renderer.render( scene, camera );
 }
