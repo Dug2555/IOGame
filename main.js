@@ -18,7 +18,7 @@ const cube2 = new THREE.Mesh( geometry2, material2 );
 scene.add( cube2 );
 
 camera.position.z = 5;
-//var value = .01;
+
 function animate() {
 	requestAnimationFrame( animate );
 
