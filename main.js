@@ -20,6 +20,9 @@ function animate() {
 	cube.rotation.x += 0.01;
 	cube.rotation.y += 0.01;
 
+	cube.translateX(1);
+	cube.translateY(1);
+
 	renderer.render( scene, camera );
 }
 
