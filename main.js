@@ -18,7 +18,7 @@ const cube2 = new THREE.Mesh( geometry2, material2 );
 scene.add( cube2 );
 
 camera.position.z = 5;
-var value = .001;
+var value = .01;
 function animate() {
 	requestAnimationFrame( animate );
 
@@ -30,8 +30,6 @@ function animate() {
 	
 	cube2.translateX(value);
 	cube.translateY(value);
-
-	value += .001;
 
 	renderer.render( scene, camera );
 }
