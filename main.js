@@ -13,13 +13,23 @@ const puck = new THREE.Mesh( geometry, material );
 scene.add( puck );
 
 camera.position.z = 5;
-var value = 0.5;
+var Xvalue = 0.01;
+var Yvalue = 0.01;
 function animate() {
 	requestAnimationFrame( animate );
 
-	puck.rotation.z += value;
+
 	puck.translateY(value);
 	puck.translateX(value);
+
+	var pos = puck.position;
+	if(pos[0] >= window.innerWidth || pos[0] <= 0){
+		Xvalue = Xvalue * -1;
+	}
+	if(pos[1] >= window.innerHeight || pos[1] <= 0){
+		Xvalue = Xvalue * -1;
+	}
+
 
 
 	renderer.render( scene, camera );
