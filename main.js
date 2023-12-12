@@ -17,6 +17,11 @@ const material2 = new THREE.MeshBasicMaterial( { color: 0xffff00 } );
 const cube2 = new THREE.Mesh( geometry2, material2 );
 scene.add( cube2 );
 
+const geometry3 = new THREE.BoxGeometry( 1, 1, 1 );
+const material3 = new THREE.MeshBasicMaterial( { color: 0xffff00 } );
+const cube3 = new THREE.Mesh( geometry2, material2 );
+scene.add( cube3 );
+
 camera.position.z = 5;
 
 function animate() {
@@ -24,14 +29,14 @@ function animate() {
 
 	cube.rotation.x += 0.01;
 	//cube.rotation.y += 0.01;
-
 	cube.translateY(0.01);
 	
 	//cube2.rotation.x += 0.01;
 	cube2.rotation.y += 0.01;
-	
 	cube2.translateX(0.01);
 	
+	cube3.rotation.z += 0.01;
+	cube3.translateZ(0.01);
 
 	renderer.render( scene, camera );
 }
