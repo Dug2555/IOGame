@@ -24,6 +24,7 @@ function animate() {
 
 	var pos = puck.position;
 	console.log(pos.x);
+	console.log(window.innerWidth)
 	if(pos.x >= window.innerWidth || pos.x <= 0){
 		Xvalue = Xvalue * -1;
 	}
