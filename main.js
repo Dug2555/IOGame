@@ -27,7 +27,7 @@ function animate() {
 		Xvalue = Xvalue * -1;
 	}
 	if(pos[1] >= window.innerHeight || pos[1] <= 0){
-		Xvalue = Xvalue * -1;
+		Yvalue = Yvalue * -1;
 	}
 
 
