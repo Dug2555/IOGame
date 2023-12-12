@@ -39,9 +39,9 @@ function animate() {
 	cube3.translateX(value);
 
 	if(value > 0){
-		value = value - .01;
-	}else{
-		value = value + .01;
+		value = value - .001;
+	}else if (value < 1){
+		value = value + .001;
 	}
 
 	renderer.render( scene, camera );
