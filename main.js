@@ -7,40 +7,20 @@ const renderer = new THREE.WebGLRenderer();
 renderer.setSize( window.innerWidth, window.innerHeight );
 document.body.appendChild( renderer.domElement );
 
-const geometry = new THREE.BoxGeometry( 1, 1, 1 );
-const material = new THREE.MeshBasicMaterial( { color: 0x0000ff } );
-const cube = new THREE.Mesh( geometry, material );
-scene.add( cube );
-
-const geometry2 = new THREE.BoxGeometry( 1, 1, 1 );
-const material2 = new THREE.MeshBasicMaterial( { color: 0xffff00 } );
-const cube2 = new THREE.Mesh( geometry2, material2 );
-scene.add( cube2 );
-
-const geometry3 = new THREE.BoxGeometry( 1, 1, 1 );
-const material3 = new THREE.MeshBasicMaterial( { color: 0xff0000 } );
-const cube3 = new THREE.Mesh( geometry3, material3 );
-scene.add( cube3 );
+const geometry = new THREE.BoxGeometry( 1, .1, 1 );
+const material = new THREE.MeshBasicMaterial( { color: 0xffff00 } );
+const puck = new THREE.Mesh( geometry, material );
+scene.add( puck );
 
 camera.position.z = 5;
 var value = 0.5;
 function animate() {
 	requestAnimationFrame( animate );
 
-	cube.rotation.x += value;
-	cube.translateY(value);
-	
-	cube2.rotation.y += value;
-	cube2.translateX(value);
-	
-	cube3.rotation.y -= value;
-	cube3.translateX(value);
+	puck.rotation.z += value;
+	puck.translateY(value);
+	puck.translateX(value);
 
-	if(value > 0){
-		value = value - .001;
-	}else if (value < 1){
-		value = value + .0001;
-	}
 
 	renderer.render( scene, camera );
 }
