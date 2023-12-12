@@ -4,6 +4,16 @@ const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
 
 const renderer = new THREE.WebGLRenderer();
+
+window.addEventListener('resize', function () {
+     let width = window.innerWidth;
+     let height = window.innerHeight;
+     renderer.setSize(width,height);
+     camera.aspect = width / height;
+     camera.updateProjectionMatrix();
+});
+
+
 renderer.setSize( window.innerWidth, window.innerHeight );
 document.body.appendChild( renderer.domElement );
 
