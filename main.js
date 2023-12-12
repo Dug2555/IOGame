@@ -19,7 +19,7 @@ scene.add( cube2 );
 
 const geometry3 = new THREE.BoxGeometry( 1, 1, 1 );
 const material3 = new THREE.MeshBasicMaterial( { color: 0xff0000 } );
-const cube3 = new THREE.Mesh( geometry2, material2 );
+const cube3 = new THREE.Mesh( geometry3, material3 );
 scene.add( cube3 );
 
 camera.position.z = 5;
