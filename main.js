@@ -24,7 +24,7 @@ function animate() {
 
 	var pos = puck.position;
 	console.log(pos.x);
-	if(pos.x >= 1.5 || pos.x <= 0.5){
+	if(pos.x >= 5 || pos.x <= 0){
 		Xvalue = Xvalue * -1;
 	}
 	//if(puck.position[1] >= 5 || puck.position[1] <= 0){
