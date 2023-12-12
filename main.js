@@ -25,10 +25,10 @@ function animate() {
 	var pos = puck.position;
 	console.log(pos.x);
 	console.log(window.innerWidth)
-	if(pos.x >= window.innerWidth || pos.x <= 0){
+	if(pos.x <= (-window.innerWidth/2) + 5 || pos.x >= (window.innerwidth/2) - 5){
 		Xvalue = Xvalue * -1;
 	}
-	if(pos.y >= window.innerHeight || pos.y <= 0){
+	if(pos.y >= (window.innerHeight/2) - 5 || pos.y <= (-window.innerHeight/2) + 5){
 		Yvalue = Yvalue * -1;
 	}
 
