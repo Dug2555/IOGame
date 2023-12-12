@@ -19,8 +19,8 @@ function animate() {
 	requestAnimationFrame( animate );
 
 
-	puck.translateY(value);
-	puck.translateX(value);
+	puck.translateY(Yvalue);
+	puck.translateX(Xvalue);
 
 	var pos = puck.position;
 	if(pos[0] >= window.innerWidth || pos[0] <= 0){
