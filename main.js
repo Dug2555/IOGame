@@ -19,16 +19,16 @@ function animate() {
 	requestAnimationFrame( animate );
 
 
-	puck.translateY(Yvalue);
+	//puck.translateY(Yvalue);
 	puck.translateX(Xvalue);
 
 	var pos = puck.position;
-	if(puck.position[0] >= 5 || puck.position[0] <= 0){
+	if(puck.position[0] >= 1.5 || puck.position[0] <= 0.5){
 		Xvalue = Xvalue * -1;
 	}
-	if(puck.position[1] >= 5 || puck.position[1] <= 0){
-		Yvalue = Yvalue * -1;
-	}
+	//if(puck.position[1] >= 5 || puck.position[1] <= 0){
+	//	Yvalue = Yvalue * -1;
+	//}
 
 
 
