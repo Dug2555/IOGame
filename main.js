@@ -35,7 +35,7 @@ function animate() {
 	cube2.rotation.y += 0.01;
 	cube2.translateX(0.01);
 	
-	cube3.rotation.z += 0.01;
+	cube3.rotation.z -= 0.01;
 	cube3.translateZ(0.01);
 
 	renderer.render( scene, camera );
