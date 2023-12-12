@@ -22,7 +22,7 @@ function animate() {
 	//puck.translateY(Yvalue);
 	puck.translateX(Xvalue);
 
-	var pos = puck.position;
+	var pos = puck.position[0];
 	console.log(pos);
 	if(puck.position[0] >= 1.5 || puck.position[0] <= 0.5){
 		Xvalue = Xvalue * -1;
