@@ -23,20 +23,26 @@ const cube3 = new THREE.Mesh( geometry3, material3 );
 scene.add( cube3 );
 
 camera.position.z = 5;
-
+var value = 1;
 function animate() {
 	requestAnimationFrame( animate );
 
-	cube.rotation.x += 0.01;
+	cube.rotation.x += value;
 	//cube.rotation.y += 0.01;
-	cube.translateY(0.01);
+	cube.translateY(value);
 	
 	//cube2.rotation.x += 0.01;
-	cube2.rotation.y += 0.01;
-	cube2.translateX(0.01);
+	cube2.rotation.y += value;
+	cube2.translateX(value);
 	
-	cube3.rotation.y -= 0.01;
-	cube3.translateX(0.01);
+	cube3.rotation.y -= value;
+	cube3.translateX(value);
+
+	if(value > 0){
+		value = value - .01;
+	}else{
+		value = value + .01;
+	}
 
 	renderer.render( scene, camera );
 }
