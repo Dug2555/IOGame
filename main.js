@@ -18,7 +18,7 @@ const cube2 = new THREE.Mesh( geometry2, material2 );
 scene.add( cube2 );
 
 const geometry3 = new THREE.BoxGeometry( 1, 1, 1 );
-const material3 = new THREE.MeshBasicMaterial( { color: 0xffff00 } );
+const material3 = new THREE.MeshBasicMaterial( { color: 0xff0000 } );
 const cube3 = new THREE.Mesh( geometry2, material2 );
 scene.add( cube3 );
 
