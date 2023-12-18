@@ -52,6 +52,24 @@ function animate() {
 		Yvalue = Yvalue * -1;
 	}
 
+	if (Math.abs(Yvalue) + Math.abs(Xvalue) > 10){
+		cubeGeo = new THREE.BoxGeometry(1,1,1)
+		colorCube = new THREE.MeshBasicMaterial( { color: 0x000000 } );
+		puck = new THREE.Mesh( cubeGeo, colorCube);
+		scene.add(puck);
+		if(Xvalue >= 0){
+			Xvalue == .01
+		}else{
+			Xvalue == -.01
+		}
+		if(Yvalue >= 0){
+			Yvalue == .01
+		}else{
+			Yvalue == -.01
+		}
+		
+	}
+
 
 
 	renderer.render( scene, camera );
