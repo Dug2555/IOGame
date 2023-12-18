@@ -55,7 +55,7 @@ function animate() {
 	}
 	console.log(Math.abs(Yvalue) + Math.abs(Xvalue));
 
-	if (Math.abs(Yvalue) + Math.abs(Xvalue) > 5){
+	if (Math.abs(Yvalue) + Math.abs(Xvalue) > 1){
 		var cubeGeo = new THREE.BoxGeometry(1,1,1);
 		var colorCube = new THREE.MeshBasicMaterial( { color: 0x0fffff } );
 		var Npuck = new THREE.Mesh( cubeGeo, colorCube);
