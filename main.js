@@ -32,14 +32,13 @@ function animate() {
 	requestAnimationFrame( animate );
 
 
-	for(var i = 0; i < (scene.children).length; i++){
-		
+	for(var i = 0; i < (group.children).length; i++){
+		group.children[i].translateY(Yvalue);
+		group.children[i].translate(Xvalue);
 	}	
-	group.translateY(Yvalue);
-	group.translateX(Xvalue);
 
 	var pos = puck.position;
-	console.log(Xvalue);
+	console.log(pos.x);
 	console.log(Yvalue);
 	if(pos.x <= -6 || pos.x >= 6){
 		if(Xvalue > 0){
@@ -62,7 +61,7 @@ function animate() {
 		var cubeGeo = new THREE.BoxGeometry(1,1,1);
 		var colorCube = new THREE.MeshBasicMaterial( { color: 0x000000 } );
 		var Npuck = new THREE.Mesh( cubeGeo, colorCube);
-		Npuck.position = (1,1,1);
+		Npuck.position.set(1,1,1);
 		scene.add(Npuck);
 		group.add(Npuck);
 		if(Xvalue >= 0){
