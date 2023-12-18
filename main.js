@@ -35,10 +35,20 @@ function animate() {
 	var pos = puck.position;
 	console.log(pos.x);
 	console.log(pos.y);
-	if(pos.x <= -5 || pos.x >= 5){
+	if(pos.x <= -6 || pos.x >= 6){
+		if(Xvalue > 0){
+			Xvalue += .01
+		}else{
+			Xvalue += -.01
+		}
 		Xvalue = Xvalue * -1;
 	}
-	if(pos.y >= 5 || pos.y <= -5){
+	if(pos.y >= 4 || pos.y <= -4){
+		if(Yvalue > 0){
+			Yvalue += .01
+		}else{
+			Yvalue += -.01
+		}
 		Yvalue = Yvalue * -1;
 	}
 
