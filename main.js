@@ -57,20 +57,20 @@ function animate() {
 
 	if (Math.abs(Yvalue) + Math.abs(Xvalue) > 5){
 		var cubeGeo = new THREE.BoxGeometry(1,1,1);
-		var colorCube = new THREE.MeshBasicMaterial( { color: 0x000000 } );
+		var colorCube = new THREE.MeshBasicMaterial( { color: 0x0fffff } );
 		var Npuck = new THREE.Mesh( cubeGeo, colorCube);
 		Npuck.position.set(1,1,1);
 		scene.add(Npuck);
 		group.add(Npuck);
 		if(Xvalue >= 0){
-			Xvalue == .01
+			Xvalue = .01
 		}else{
-			Xvalue == -.01
+			Xvalue = -.01
 		}
 		if(Yvalue >= 0){
-			Yvalue == .01
+			Yvalue = .01
 		}else{
-			Yvalue == -.01
+			Yvalue = -.01
 		}
 		
 	}
