@@ -34,7 +34,7 @@ function animate() {
 
 	for(var i = 0; i < (group.children).length; i++){
 		group.children[i].translateY(Yvalue);
-		group.children[i].translate(Xvalue);
+		group.children[i].translateX(Xvalue);
 	}	
 
 	var pos = puck.position;
