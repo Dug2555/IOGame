@@ -35,27 +35,25 @@ function animate() {
 	for(var i = 0; i < (group.children).length; i++){
 		group.children[i].translateY(Yvalue);
 		group.children[i].translateX(Xvalue);
-	}	
-
-	var pos = puck.position;
-	console.log(pos.x);
-	console.log(Yvalue);
-	if(pos.x <= -6 || pos.x >= 6){
-		if(Xvalue > 0){
-			Xvalue += .01
-		}else{
-			Xvalue += -.01
+		
+		if(group.children[i].position.x <= -6 || group.children[i].position.x >= 6){
+			if(Xvalue > 0){
+				Xvalue += .01
+			}else{
+				Xvalue += -.01
+			}
+			Xvalue = Xvalue * -1;
 		}
-		Xvalue = Xvalue * -1;
-	}
-	if(pos.y >= 4 || pos.y <= -4){
-		if(Yvalue > 0){
-			Yvalue += .01
-		}else{
-			Yvalue += -.01
+		if(group.children[i].position.y >= 4 || group.children[i].position.y <= -4){
+			if(Yvalue > 0){
+				Yvalue += .01
+			}else{
+				Yvalue += -.01
+			}
+			Yvalue = Yvalue * -1;
 		}
-		Yvalue = Yvalue * -1;
 	}
+	console.log(Math.abs(Yvalue) + Math.abs(Xvalue));
 
 	if (Math.abs(Yvalue) + Math.abs(Xvalue) > 5){
 		var cubeGeo = new THREE.BoxGeometry(1,1,1);
