@@ -22,9 +22,6 @@ const material = new THREE.MeshBasicMaterial( { color: 0xffff00 } );
 const puck = new THREE.Mesh( geometry, material );
 scene.add( puck );
 
-const group = new THREE.Group();
-group.add(puck);
-scene.add(group);
 camera.position.z = 5;
 var Xvalue = 0.03;
 var Yvalue = 0.01;
@@ -32,11 +29,11 @@ function animate() {
 	requestAnimationFrame( animate );
 
 
-	for(var i = 0; i < (group.children).length; i++){
-		group.children[i].translateY(Yvalue);
-		group.children[i].translateX(Xvalue);
+	for(var i = 0; i < (scene.children).length; i++){
+		scene.children[i].translateY(Yvalue);
+		scene.children[i].translateX(Xvalue);
 		
-		if(group.children[i].position.x <= -6 || group.children[i].position.x >= 6){
+		if(scene.children[i].position.x <= -6 || scene.children[i].position.x >= 6){
 			if(Xvalue > 0){
 				Xvalue += .01
 			}else{
@@ -44,7 +41,7 @@ function animate() {
 			}
 			Xvalue = Xvalue * -1;
 		}
-		if(group.children[i].position.y >= 4 || group.children[i].position.y <= -4){
+		if(scene.children[i].position.y >= 4 || scene.children[i].position.y <= -4){
 			if(Yvalue > 0){
 				Yvalue += .01
 			}else{
@@ -61,7 +58,7 @@ function animate() {
 		var Npuck = new THREE.Mesh( cubeGeo, colorCube);
 		Npuck.position.set(1,1,1);
 		scene.add(Npuck);
-		group.add(Npuck);
+		
 		if(Xvalue >= 0){
 			Xvalue = .01
 		}else{
