@@ -33,8 +33,8 @@ function animate() {
 	puck.translateX(Xvalue);
 
 	var pos = puck.position;
-	console.log(pos.x);
-	console.log(pos.y);
+	console.log(Xvalue);
+	console.log(Yvalue);
 	if(pos.x <= -6 || pos.x >= 6){
 		if(Xvalue > 0){
 			Xvalue += .01
@@ -52,7 +52,7 @@ function animate() {
 		Yvalue = Yvalue * -1;
 	}
 
-	if (Math.abs(Yvalue) + Math.abs(Xvalue) > 10){
+	if (Math.abs(Yvalue) + Math.abs(Xvalue) > 5){
 		cubeGeo = new THREE.BoxGeometry(1,1,1)
 		colorCube = new THREE.MeshBasicMaterial( { color: 0x000000 } );
 		puck = new THREE.Mesh( cubeGeo, colorCube);
