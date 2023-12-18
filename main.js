@@ -24,7 +24,7 @@ scene.add( puck );
 
 const group = new THREE.Group();
 group.add(puck);
-
+scene.add(group);
 camera.position.z = 5;
 var Xvalue = 0.03;
 var Yvalue = 0.01;
