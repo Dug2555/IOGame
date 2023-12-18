@@ -34,11 +34,11 @@ function animate() {
 
 	var pos = puck.position;
 	console.log(pos.x);
-	console.log(window.innerWidth)
-	if(pos.x <= 75 || pos.x >= 75){
+	console.log(pos.y);
+	if(pos.x <= -75 || pos.x >= 75){
 		Xvalue = Xvalue * -1;
 	}
-	if(pos.y >= 75 || pos.y <= 75){
+	if(pos.y >= 75 || pos.y <= -75){
 		Yvalue = Yvalue * -1;
 	}
 
